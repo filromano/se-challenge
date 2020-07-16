@@ -1,0 +1,12 @@
+.product-item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 23%;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.product-item .header{
+  font-weight: 100;
+  font-size: 0.8em;
+}
