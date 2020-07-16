@@ -15,21 +15,19 @@ class ProductList extends Component {
 
   componentDidMount() {
     this.props.getProducts();
-    console.log(this.props);
   }
 
   render() {
+    const list = this.props.products.items.map((item) => (
+      <ProductItem key={item.id}
+                   name={item.name}
+                   image={item.image}/>
+    ));
     return (
       <div>
         <h1>Produtos</h1>
         <div className="product-list">
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
+          {list}
         </div>
       </div>
     );

@@ -5,11 +5,10 @@ import React from 'react';
 export default (props) => (
   <div className="product-item">
     <div className="header">
-      <p><strong>Brahma</strong></p>
+      <p><strong>{props.name}</strong></p>
       <p>Cerveja Brahma 300ml</p>
     </div>
-    <div className="image">
-      <img src="https://cdn.shopify.com/s/files/1/0010/3150/3987/products/Enrrgetico_fusion_250ml_Lata.png?v=1565713637" alt="place"/>
+    <div className="image" style={{backgroundImage: `url(${props.image})`}}>
     </div>
     <div className="packs">
       <p>Escolha o seu pack</p>
