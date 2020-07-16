@@ -21,7 +21,8 @@ class ProductList extends Component {
     const list = this.props.products.items.map((item) => (
       <ProductItem key={item.id}
                    name={item.name}
-                   image={item.image}/>
+                   image={item.image}
+                   packs={item.packs}/>
     ));
     return (
       <div>

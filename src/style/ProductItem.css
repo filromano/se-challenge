@@ -50,6 +50,10 @@
   color: #FFF;
 }
 
+.product-item .packs button.active {
+  background: #fe5c3d;
+}
+
 .product-item .prices {
   display: flex;
   justify-content: space-between;
