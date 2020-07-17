@@ -2,10 +2,10 @@ import React from "react";
 
 import './style/index.css';
 
-import ProductList from './components/Products/ProductList';
+import Routes from './routes/index';
 
 export default (props) => (
-  <div className="test">
-    <ProductList />
+  <div className="app">
+    <Routes />
   </div>
 )

@@ -18,7 +18,7 @@ class ProductList extends Component {
   }
 
   render() {
-    const list = this.props.products.items.map((item) => (
+    const list = this.props.products.map((item) => (
       <ProductItem key={item.id}
                    productId={item.id}
                    name={item.name}
@@ -36,7 +36,7 @@ class ProductList extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({products: state.products});
+const mapStateToProps = (state) => ({products: state.products.items});
 const mapDispatchToProps = (dispatch) => 
   bindActionCreators({ getProducts }, dispatch);
 
