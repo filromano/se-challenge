@@ -6,7 +6,6 @@ export const getProducts = () => ({
 });
 
 export const addToCart = (productId, packId) => {
-  console.log('here')
   const item = {productId, packId};
   return ({
     type: 'ADD_TO_KART',

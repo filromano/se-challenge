@@ -28,12 +28,14 @@ class Packs extends Component {
   }
 
   setValues = () => {
+    const id = this.state.packs[this.state.selectedPack].id;
     const originalPrice = this.state.packs[this.state.selectedPack].original_price;
     const currentPrice = this.state.packs[this.state.selectedPack].current_price;
     const percentage = this.setPercentage(originalPrice, currentPrice);
     this.setState(state => ({
       selected: {
         ...state.selected,
+        id,
         originalPrice,
         currentPrice,
         percentage
