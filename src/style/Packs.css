@@ -41,17 +41,3 @@
 .packs .prices .final-price {
   color: green;
 }
-
-.packs .cart {
-  width: 100%;
-  border: none;
-  border-radius: 15px;
-  padding: 10px 0;
-  background-color: #fe5c3d;
-  color: #FFF;
-  cursor: pointer;
-}
-
-.cart:hover{
-  background-color: #e42911;
-}

@@ -4,11 +4,3 @@ export const getProducts = () => ({
   type: 'GET_ALL_PRODUCTS',
   payload: products.items,
 });
-
-export const addToCart = (productId, packId) => {
-  const item = {productId, packId};
-  return ({
-    type: 'ADD_TO_KART',
-    payload: item
-  })
-};

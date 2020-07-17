@@ -1,10 +1,8 @@
 import '../../style/Packs.css';
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-import { addToCart } from '../../store/actions/products';
+import CartBox from './CartBox';
 
 class Packs extends Component {
 
@@ -95,13 +93,11 @@ class Packs extends Component {
             </span>
           </span>
         </div>
-        <button className="cart" onClick={e => this.props.addToCart(this.state.productId, this.state.selected.id)}>Adicionar ao carrinho</button>
+        <CartBox productId={this.state.productId}
+                   packId={this.state.selected.id}/>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = (dispatch) => 
-  bindActionCreators({ addToCart }, dispatch);
-
-export default connect(null, mapDispatchToProps)(Packs);
+export default Packs;

@@ -32,6 +32,6 @@ class CartList extends Component {
   }
 }
 
-const mapStateToProps  = (state) => ({cart: state.products.cart})
+const mapStateToProps  = (state) => ({cart: state.cart})
 
 export default connect(mapStateToProps)(CartList);
