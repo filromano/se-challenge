@@ -1,0 +1,57 @@
+.packs .box {
+  display: block;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: rgb(245, 245, 245);
+}
+
+.packs .box .options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.packs .box button {
+  padding: 10px;
+  background: #ffa492;
+  border: none;
+  border-radius: 15px;
+  color: #FFF;
+}
+
+.packs .box button.active {
+  background: #fe5c3d;
+}
+
+.packs .prices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+}
+
+.packs .prices .discount {
+  color: red;
+}
+
+.packs .prices .original-price {
+  color: gray;
+}
+
+.packs .prices .final-price {
+  color: green;
+}
+
+.packs .cart {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 0;
+  background-color: #fe5c3d;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.cart:hover{
+  background-color: #e42911;
+}

@@ -1,10 +1,17 @@
+import '../../style/Packs.css';
+
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { addToCart } from '../../store/actions/products';
 
 class Packs extends Component {
 
   constructor(props){
     super(props)
     this.state = {
+      productId: props.productId,
       packs: props.packs,
       selectedPack: 0,
       selected: {
@@ -64,9 +71,9 @@ class Packs extends Component {
     })
 
     return (
-      <div>
-        <div className="packs">
-          <p>Escolha o seu pack</p>
+      <div className="packs">
+        <div className="box">
+          <p>Escolha o seu pack:</p>
           <div className="options">
             {buttons}
           </div>
@@ -86,9 +93,13 @@ class Packs extends Component {
             </span>
           </span>
         </div>
+        <button className="cart" onClick={e => this.props.addToCart(this.state.productId, this.state.selected.id)}>Adicionar ao carrinho</button>
       </div>
     );
   }
 }
 
-export default Packs;
+const mapDispatchToProps = (dispatch) => 
+  bindActionCreators({ addToCart }, dispatch);
+
+export default connect(null, mapDispatchToProps)(Packs);
