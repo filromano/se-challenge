@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import CartItem from './CartItem';
+
 class CartList extends Component {
 
   constructor(props){
@@ -8,10 +10,15 @@ class CartList extends Component {
   }
 
   render() {
-
+    const cart = this.props.cart;
     let itemsList;
-    if(this.props.cart.length > 0){
-      console.log('here');
+    if(cart.length > 0){
+      itemsList = cart.map((item, index) => {
+        return (
+          <CartItem key={index}
+                    ids={item}/>
+        );
+      })
     } else {
       itemsList = <h1>Carrinho vazio</h1>;
     }

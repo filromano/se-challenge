@@ -1,6 +1,9 @@
 const initialState = {
   items: [],
-  cart: [],
+  cart: [{
+    productId:"50",
+    packId:"148"
+  }],
 };
 
 export default function(state = initialState, action) {
