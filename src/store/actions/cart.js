@@ -5,3 +5,11 @@ export const addToCart = (productId, packId, quantity) => {
     payload: item
   })
 };
+
+export const updateQuantityToCart = (productId, packId, quantity) => {
+  const item = {productId, packId, quantity};
+  return ({
+    type: 'UPDATE_QUANTITY_TO_CART',
+    payload: item
+  })
+};
