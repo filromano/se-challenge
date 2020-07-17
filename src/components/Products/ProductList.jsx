@@ -27,7 +27,6 @@ class ProductList extends Component {
     ));
     return (
       <div>
-        <h1>Produtos</h1>
         <div className="product-list">
           {list}
         </div>

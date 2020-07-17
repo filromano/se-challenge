@@ -1,9 +1,10 @@
 import React from 'react';
 
+import Grid from '../template/Grid';
 import ProductList from './ProductList';
 
 export default (props) => (
-  <div className="products">
+  <Grid title="Produtos">
     <ProductList />
-  </div>
+  </Grid>
 )

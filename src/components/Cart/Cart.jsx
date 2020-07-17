@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
+import Grid from '../template/Grid';
 import CartList from  './CartList';
 
 class Cart extends Component {
   render() {
     return (
-      <div className="cart">
-        <h1>Cart</h1>
+      <Grid title="Carrinho">
         <CartList />
-      </div>
+      </Grid>
     )
   }
 }
