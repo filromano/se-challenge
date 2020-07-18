@@ -1,5 +1,6 @@
+@import '../../../scss/utils.scss';
+
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
+  @include flexBox($wrap: wrap);
   width: 100%;
 }

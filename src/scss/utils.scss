@@ -2,3 +2,13 @@
 $orangeBase: #fe5c3d;
 $darkOrange: #e42911;
 $lightOrange: #ffa492;
+
+//mixings
+@mixin flexBox($direction: row, $basis: null, $content: null, $items: null, $wrap: null) {
+  display: flex;
+  flex-wrap: $wrap;
+  flex-basis: $basis;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $items;
+}

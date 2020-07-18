@@ -1,9 +1,7 @@
 @import '../../../scss/utils.scss';
 
 .product-item {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 23%;
+  @include flexBox($direction: column, $basis: 23%);
   box-sizing: border-box;
   border: 1px solid $orangeBase;
   border-radius: 15px;

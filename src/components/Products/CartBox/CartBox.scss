@@ -16,9 +16,7 @@
 }
 
 .cart-box .cart-quantity {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexBox($content: center, $items: center);
 }
 
 .cart-box .cart-quantity span {
