@@ -18,10 +18,12 @@ class ProductList extends Component {
   }
 
   render() {
+    console.log(this.props.products)
     const list = this.props.products.map((item) => (
       <ProductItem key={item.id}
                    productId={item.id}
                    name={item.name}
+                   vendor={item.vendors[0].vendor.name}
                    image={item.image}
                    packs={item.packs}/>
     ));
