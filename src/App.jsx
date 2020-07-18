@@ -1,6 +1,6 @@
 import React from "react";
 
-import './style/index.css';
+import './index.scss';
 
 import Routes from './routes/index';
 

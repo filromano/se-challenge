@@ -1,4 +1,4 @@
-import '../../style/Menu.css';
+import './Menu.scss';
 
 import React from 'react';
 import { Link, BrowserRouter } from 'react-router-dom';

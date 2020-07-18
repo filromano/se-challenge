@@ -1,14 +1,12 @@
-import '../../style/CartBox.css';
+import './CartBox.scss';
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { addToCart, updateQuantityToCart } from '../../store/actions/cart';
+import { addToCart, updateQuantityToCart } from '../../../store/actions/cart';
 
 class AddToCart extends Component {
-
-
 
   render() {
 

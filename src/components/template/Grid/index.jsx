@@ -1,4 +1,4 @@
-import '../../style/Grid.css';
+import './Grid.scss';
 
 import React from 'react';
 

@@ -1,8 +1,8 @@
-import '../../style/ProductItem.css';
+import './ProductItem.scss';
 
 import React from 'react';
 
-import Packs from './Packs';
+import Packs from '../Packs/';
 
 export default (props) => {
   return (

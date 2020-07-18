@@ -1,8 +1,8 @@
-import '../../style/Packs.css';
+import './Packs.scss';
 
 import React, { Component } from 'react';
 
-import CartBox from './CartBox';
+import CartBox from '../CartBox/';
 
 class Packs extends Component {
 
