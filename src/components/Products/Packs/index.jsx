@@ -56,13 +56,12 @@ class Packs extends Component {
   render() {
 
     const buttons = this.state.packs.map((pack, index) => {
-      let number = [15, 30, 60];
       if(pack.status === 'ACTIVE'){
         return (
           <button key={index}
                   className={index === this.state.selectedPack ? 'active' : ''}
                   onClick={e => this.selectPack(index)}>
-            {number[index]} unid.
+            {pack.unities} unid.
           </button>
         )
       } else {
