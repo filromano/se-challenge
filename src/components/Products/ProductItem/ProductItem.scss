@@ -1,9 +1,11 @@
+@import '../../../scss/utils.scss';
+
 .product-item {
   display: flex;
   flex-direction: column;
   flex-basis: 23%;
   box-sizing: border-box;
-  border: 1px solid #fe5c3d;
+  border: 1px solid $orangeBase;
   border-radius: 15px;
   -webkit-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.43);
   -moz-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.43);
