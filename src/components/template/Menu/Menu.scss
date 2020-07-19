@@ -9,15 +9,16 @@
   height: 75px;
   width: 100%;
   background-color: #ffffffcf;
-}
 
-.navbar .navbar-item {
-  display: block;
-  width: 300px;
-  padding: 15px;
-  font-size: 1.3em;
-  color: $orangeBase;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
+  .navbar-item {
+    display: block;
+    width: 300px;
+    padding: 15px;
+    font-size: 1.3em;
+    color: $orangeBase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 }
