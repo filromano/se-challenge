@@ -3,6 +3,7 @@ import './CartItem.scss';
 import React from 'react';
 
 import QuanityInput from '../../commun/QuantityInput';
+import { defaultImage } from '../../../js/utils';
 
 export default (props) => {
 
@@ -10,7 +11,9 @@ export default (props) => {
 
   return (
     <div className="cart-item">
-      <div className="image" style={{backgroundImage: `url(${image})`}}></div>
+      <div className="image">
+        <img onError={defaultImage} src={image} alt={name}/>
+      </div>
       <div className="description">
         <div className="info">
           <p className="name">{name}</p>
