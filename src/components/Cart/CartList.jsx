@@ -16,7 +16,7 @@ class CartList extends Component {
       itemsList = cart.map((item, index) => {
         return (
           <CartItem key={index}
-                    ids={item}/>
+                    order={item}/>
         );
       })
     } else {
