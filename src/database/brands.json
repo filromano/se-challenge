@@ -1,0 +1,163 @@
+[
+  {
+      "id": "1",
+      "uuid": "d57a3932-777d-4733-b5b6-e7d0197f90c7",
+      "name": "Água AMA",
+      "slug": "Agua-AMA",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "2",
+      "uuid": "d224171e-6308-475c-9867-626d7535fa1b",
+      "name": "Do Bem",
+      "slug": "Do-Bem",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "3",
+      "uuid": "69d892f8-77e6-4137-83b0-69351a369cf9",
+      "name": "Tônica Antárctica",
+      "slug": "Tonica-Antarctica",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "4",
+      "uuid": "f76d2162-d8fb-4f0f-90a4-0f2c02edec7c",
+      "name": "Antárctica",
+      "slug": "Antarctica",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "5",
+      "uuid": "aaf7bbd7-55a5-42aa-adca-06092e06cdd9",
+      "name": "Beck's",
+      "slug": "Beck's",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "6",
+      "uuid": "716d3003-d4ed-439c-bf2e-3e82f08d0919",
+      "name": "Bohemia",
+      "slug": "Bohemia",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "7",
+      "uuid": "d0420599-ad42-4c67-ad8d-689419fb0e6d",
+      "name": "Brahma",
+      "slug": "Brahma",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "8",
+      "uuid": "b492218b-7b0d-4bdb-9157-79a7ba596d0a",
+      "name": "Brahma Extra",
+      "slug": "Brahma-Extra",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "9",
+      "uuid": "61edadf5-ac90-4347-a086-a74a3f18f294",
+      "name": "Budweiser",
+      "slug": "Budweiser",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "10",
+      "uuid": "2a899d12-6a9e-4135-983b-5356a4dfab15",
+      "name": "Colorado",
+      "slug": "Colorado",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "11",
+      "uuid": "8e9af77b-69ef-4f07-b7d4-36c151e696ac",
+      "name": "Corona",
+      "slug": "Corona",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "12",
+      "uuid": "6a3ee368-6a7e-4f2a-bd11-16a04913792c",
+      "name": "Hoegaarden",
+      "slug": "Hoegaarden",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "13",
+      "uuid": "13ad90e8-5bb8-402c-9542-d2efe053f10e",
+      "name": "Original",
+      "slug": "Original",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "14",
+      "uuid": "b7fcae1b-0b9d-48fc-b74a-8f4a986d1076",
+      "name": "Patagonia",
+      "slug": "Patagonia",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "15",
+      "uuid": "828eb86c-0432-4055-a173-97e24af4557c",
+      "name": "Skol",
+      "slug": "Skol",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "16",
+      "uuid": "46b3ac06-1502-46ed-9bb4-aeaf1b3215f4",
+      "name": "Stella Artois",
+      "slug": "Stella-Artois",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "17",
+      "uuid": "c06e3d3b-56b9-4a6f-a1b3-2be6552b2de6",
+      "name": "Lipton",
+      "slug": "Lipton",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "18",
+      "uuid": "b6cc6822-e3ab-4867-ba28-04c0c47a0491",
+      "name": "Fusion",
+      "slug": "Fusion",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "19",
+      "uuid": "64a794ab-1567-448e-ad22-add21795abd8",
+      "name": "Gatorade",
+      "slug": "Gatorade",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "20",
+      "uuid": "6e7526d8-c504-4c4c-9d4f-15f9614c7d47",
+      "name": "Guaraná Antárctica",
+      "slug": "Guarana-Antarctica",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "21",
+      "uuid": "7ece4279-2c8c-47dc-a818-18cf4edf0ca5",
+      "name": "Soda Antárctica",
+      "slug": "Soda-Antarctica",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "22",
+      "uuid": "ed4cf51f-ce23-4b0a-9b31-fa1b1880276f",
+      "name": "H2OH",
+      "slug": "H2OH",
+      "status": "ACTIVE"
+  },
+  {
+      "id": "23",
+      "uuid": "2dc12798-9864-40dc-ac5b-3271b630a035",
+      "name": "Pepsi",
+      "slug": "Pepsi",
+      "status": "ACTIVE"
+  }
+]
