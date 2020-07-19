@@ -26,6 +26,8 @@ class CartList extends Component {
           totals.push(total)
           return (
             <CartItem key={index}
+                      productId={product.id}
+                      packId={pack.id}
                       image={product.image}
                       name={product.name}
                       pack={pack.unities}
