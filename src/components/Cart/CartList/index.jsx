@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 
 import CartItem from '../CartItem/';
 
+import { setPercentage } from '../../../js/utils';
+
 class CartList extends Component {
 
   constructor(props){
@@ -27,6 +29,9 @@ class CartList extends Component {
           //calculate total for Item
           const total = parseFloat((pack.current_price * item.quantity).toFixed(2));
 
+          //calculatePercentage
+          const percentage = setPercentage(pack.original_price, pack.current_price);
+
           //push total, to array with all totals
           totals.push(total)
 
@@ -37,6 +42,7 @@ class CartList extends Component {
                       image={product.image}
                       name={product.name}
                       pack={pack.unities}
+                      percentage={percentage}
                       price={pack.current_price}
                       quantity={item.quantity}
                       total={total}/>

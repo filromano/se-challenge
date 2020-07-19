@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 
 import CartBox from '../CartBox/';
 
+import { setPercentage } from '../../../js/utils';
+
 class Packs extends Component {
 
   constructor(props){
@@ -29,7 +31,7 @@ class Packs extends Component {
     const id = this.state.packs[this.state.selectedPack].id;
     const originalPrice = this.state.packs[this.state.selectedPack].original_price;
     const currentPrice = this.state.packs[this.state.selectedPack].current_price;
-    const percentage = this.setPercentage(originalPrice, currentPrice);
+    const percentage = setPercentage(originalPrice, currentPrice);
     this.setState(state => ({
       selected: {
         ...state.selected,
@@ -40,13 +42,7 @@ class Packs extends Component {
       }
     }));
   }
-
-  setPercentage = (originalPrice, currentPrice) => {
-    const difference = originalPrice - currentPrice;
-    const discount = difference * 100 / originalPrice;
-    return parseInt(discount);
-  }
-
+  
   selectPack = (index) => {
     this.setState({...this.state, selectedPack: index}, () => {
       this.setValues();

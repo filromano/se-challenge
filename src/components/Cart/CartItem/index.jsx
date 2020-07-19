@@ -6,7 +6,7 @@ import QuanityInput from '../../commun/QuantityInput';
 
 export default (props) => {
 
-  const { image, name, pack, productId, packId, quantity, total } = props;
+  const { image, name, pack, percentage, productId, packId, quantity, total } = props;
 
   return (
     <div className="cart-item">
@@ -14,7 +14,7 @@ export default (props) => {
       <div className="description">
         <div className="info">
           <p className="name">{name}</p>
-          <p className="details">Unidades.: {pack} || Desc: 30%</p>
+            <p className="details">Unidades.: {pack} || Desc: {percentage}%</p>
         </div>
         <QuanityInput productId={productId}
                         packId={packId}
