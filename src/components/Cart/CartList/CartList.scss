@@ -4,6 +4,7 @@
   display: block;
   width: 100%;
   .cart-items {
-    @include flexBox();
+    @include flexBox($wrap: wrap, $content: space-between);
+    margin-top: 40px;
   }
 }

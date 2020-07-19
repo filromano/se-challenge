@@ -22,7 +22,6 @@ class CartList extends Component {
         if(product) {
           const pack = product.packs.filter(pack => pack.id === item.packId)[0];
           const total = parseFloat((pack.current_price * item.quantity).toFixed(2));
-          console.log(pack)
           totals.push(total)
           return (
             <CartItem key={index}
@@ -41,7 +40,7 @@ class CartList extends Component {
       itemsList = <h1>Carrinho vazio</h1>;
     }
 
-    const finalPrice = parseFloat(totals.reduce((a, b) => a + b).toFixed(2));
+    const finalPrice = totals.reduce((a, b) => a + b).toFixed(2).replace('.', ',');
 
     return (
       <div className="cart-list">
