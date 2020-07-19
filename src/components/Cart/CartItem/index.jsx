@@ -1,20 +1,14 @@
 import './CartItem.scss';
 
-import React, { Component } from 'react';
+import React from 'react';
 
-class CartItem extends Component {
-
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return (
-      <div className="cart-items">
-        {this.props.name}
-      </div>
-    )
-  }
-};
-
-export default CartItem;
+export default (props) => (
+  <div className="cart-item">
+    <div className="image" style={{backgroundImage: `url(${props.image})`}}></div>
+    <div className="description">
+      <p>{props.name}</p>
+      <p>Unidades.: {props.pack} || Desc: 30%</p>
+      <p>Preço: {props.total}</p>
+    </div>
+  </div>
+);

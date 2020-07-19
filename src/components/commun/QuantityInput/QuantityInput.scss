@@ -1,0 +1,22 @@
+@import '../../../scss/utils.scss';
+
+.cart-quantity {
+  @include flexBox($content: center, $items: center);
+  span {
+    font-size: 2em;
+    color: $orangeBase;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .remove {
+    font-size: 2.5em;
+  }
+  .amount {
+    display: block;
+    max-width: 120px;
+    margin: 0 15px;
+    max-height: 30px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+}

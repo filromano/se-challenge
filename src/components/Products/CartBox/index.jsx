@@ -4,7 +4,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { addToCart, updateQuantityToCart } from '../../../store/actions/cart';
+import QuantityInput from  '../../commun/QuantityInput';
+
+import { addToCart } from '../../../store/actions/cart';
 
 class AddToCart extends Component {
 
@@ -15,13 +17,9 @@ class AddToCart extends Component {
     const check = this.props.cart.filter((item) => item.productId === this.props.productId && item.packId === this.props.packId);
 
     if(check.length > 0) {
-      button =  <div className="cart-quantity">
-                  <span className="remove"
-                        onClick={e => this.props.updateQuantityToCart(check[0].productId, check[0].packId, check[0].quantity - 1)}>-</span>
-                  <input className="amount" type="text" readOnly value={check[0].quantity}/>
-                  <span className="add"
-                        onClick={e => this.props.updateQuantityToCart(check[0].productId, check[0].packId, check[0].quantity + 1)}>+</span>
-                </div>
+      button =  <QuantityInput productId={check[0].productId}
+                               packId={check[0].packId}
+                               quantity={check[0].quantity}/>
     } else {
       button = <button className="cart-button" 
                       onClick={e => this.props.addToCart(this.props.productId, this.props.packId, 1)}>
@@ -40,6 +38,6 @@ class AddToCart extends Component {
 const mapStateToProps = (state) => ({cart: state.cart});
 
 const mapDispatchToProps = (dispatch) => 
-  bindActionCreators({ addToCart, updateQuantityToCart }, dispatch);
+  bindActionCreators({ addToCart }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddToCart);

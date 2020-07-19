@@ -1,6 +1,7 @@
 const initialState = [{
-
-  
+  productId:"50",
+  packId:"148",
+  quantity: 2,
 }];
 
 

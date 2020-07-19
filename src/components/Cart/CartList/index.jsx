@@ -22,10 +22,16 @@ class CartList extends Component {
         if(product) {
           const pack = product.packs.filter(pack => pack.id === item.packId)[0];
           const total = parseFloat((pack.current_price * item.quantity).toFixed(2));
+          console.log(pack)
           totals.push(total)
           return (
             <CartItem key={index}
-                      name={product.name}/>
+                      image={product.image}
+                      name={product.name}
+                      pack={pack.unities}
+                      price={pack.current_price}
+                      quantity={item.quantity}
+                      total={total}/>
           ); 
         }
       })
@@ -33,32 +39,13 @@ class CartList extends Component {
       itemsList = <h1>Carrinho vazio</h1>;
     }
 
-    const finalPrice = totals.reduce((a, b) => a + b);
+    const finalPrice = parseFloat(totals.reduce((a, b) => a + b).toFixed(2));
 
     return (
       <div className="cart-list">
-        <div className="cart-table">
-          <div className="header">
-            <div className="header-item">
-              <p>Nome</p>
-            </div>
-            <div className="header-item">
-              <p>Preço</p>
-            </div>
-            <div className="header-item">
-              <p>Preço c/ desconto</p>
-            </div>
-            <div className="header-item">
-              <p>Quant.</p>
-            </div>
-            <div className="header-item">
-              <p>Total</p>
-            </div>
-          </div>
+        <p>Total a pagar: {finalPrice}</p>
+        <div className="cart-items">
           {itemsList}
-        </div>
-        <div>
-          <p>{finalPrice}</p>
         </div>
       </div>
     )

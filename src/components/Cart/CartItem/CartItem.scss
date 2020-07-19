@@ -1,10 +1,16 @@
 @import '../../../scss/utils.scss';
 
 .cart-item {
-  @include flexBox($content: space-between, $items: center);
-  div {
+  @include flexBox();
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid $orangeBase;
+  .image {
     display: block;
-    width: 100%;
-    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }

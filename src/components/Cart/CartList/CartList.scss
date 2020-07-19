@@ -1,20 +1,9 @@
-@import './../../../scss/utils.scss';
+@import '../../../scss/utils.scss';
 
 .cart-list {
   display: block;
   width: 100%;
-  background-color: blue;
-  .cart-table {
-    @include flexBox($direction: column);
-    width: 100%;
-    .header {
-      @include flexBox($content: space-between, $items: center);
-      width: 100%;
-      .header-item {
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-    }
+  .cart-items {
+    @include flexBox();
   }
 }
