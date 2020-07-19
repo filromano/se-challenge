@@ -6,24 +6,25 @@
   box-sizing: border-box;
   padding: 10px 20px;
   margin: 10px 1%;
+
+  .header{
+    display: block;
+    height: 60px;
+    font-weight: 100;
+    font-size: 0.8em;
+  }
+
+  .image {
+    display: block;
+    width: 80%;
+    height: 250px;
+    margin: 0 auto;
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   @include respond-to('medium') {
     width: 300px;
   }
-}
-
-.product-item .header{
-  display: block;
-  height: 60px;
-  font-weight: 100;
-  font-size: 0.8em;
-}
-
-.product-item .image {
-  display: block;
-  width: 80%;
-  height: 250px;
-  margin: 0 auto;
-  background-position: center bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
 }

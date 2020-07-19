@@ -1,43 +1,49 @@
 @import '../../../scss/utils.scss';
 
-.packs .box {
-  display: block;
-  padding: 20px;
-  margin: 10px 0;
-  background-color: rgb(245, 245, 245);
-}
+.packs {
 
-.packs .box .options {
-  @include flexBox($content: space-around);
-  margin-top: 10px;
-}
+  .box {
+    display: block;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: rgb(245, 245, 245);
 
-.packs .box button {
-  padding: 10px;
-  background: $lightOrange;
-  border: none;
-  border-radius: 15px;
-  color: #FFF;
-}
+    .options {
+      @include flexBox($content: space-around);
+      margin-top: 10px;
+    }
 
-.packs .box button.active {
-  background: $orangeBase;
-}
+    button {
+      padding: 10px;
+      background: $lightOrange;
+      border: none;
+      border-radius: 15px;
+      color: #FFF;
+    }
 
-.packs .prices {
-  @include flexBox($content: space-between);
-  margin-bottom: 20px;
-  font-size: 0.8em;
-}
+    button.active {
+      background: $orangeBase;
+    }
 
-.packs .prices .discount {
-  color: red;
-}
+  }
 
-.packs .prices .original-price {
-  color: gray;
-}
+  .prices {
+    @include flexBox($content: space-between);
+    margin-bottom: 20px;
+    font-size: 0.8em;
 
-.packs .prices .final-price {
-  color: green;
+    .discount {
+      color: red;
+    }
+
+    .original-price {
+      color: gray;
+    }
+
+    .final-price {
+      color: green;
+    }
+
+  }
+
 }

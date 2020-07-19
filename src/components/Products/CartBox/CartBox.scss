@@ -1,16 +1,21 @@
 @import '../../../scss/utils.scss';
 
-.cart-box .cart-button {
-  width: 100%;
-  border: none;
-  border-radius: 15px;
-  padding: 10px 0;
-  margin: 18px 0;
-  background-color: $orangeBase;
-  color: #FFF;
-  cursor: pointer;
-}
+.cart-box {
 
-.cart-box .cart-button:hover {
-  background-color: $darkOrange;
+  .cart-button {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 0;
+    margin: 18px 0;
+    background-color: $orangeBase;
+    color: #FFF;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $darkOrange;
+    }
+    
+  }
+ 
 }

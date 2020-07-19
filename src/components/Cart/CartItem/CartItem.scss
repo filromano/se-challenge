@@ -6,6 +6,7 @@
   box-sizing: border-box;
   padding: 20px;
   margin: 5px;
+
   .image {
     display: block;
     width: 200px;
@@ -14,24 +15,33 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   .description {
     @include flexBox($direction: column, $content: space-between);
+
     .info {
+
       .name {
         font-size: 1.2em;
       }
+
       .details {
         font-size: 0.9em;
         font-weight: 100;
+
       }
     }
+
     .total {
       font-size: 1.3em;
       font-weight: 800;
       text-align: right;
     }
+
   }
+
   @include respond-to('medium') {
     width: 455px;
   }
+  
 }

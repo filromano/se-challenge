@@ -15,7 +15,7 @@ export default (props) => (
       <QuanityInput productId={props.productId}
                       packId={props.packId}
                       quantity={props.quantity}/>
-      <p className="total">Preço: {props.total.toFixed(2).replace('.', ',')}</p>
+      <p className="total">Preço: R${props.total.toFixed(2).replace('.', ',')}</p>
     </div>
   </div>
 );

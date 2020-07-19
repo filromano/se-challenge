@@ -44,7 +44,7 @@ class CartList extends Component {
 
     return (
       <div className="cart-list">
-        <p>Total a pagar: {finalPrice}</p>
+        <p className="final-price">Total a pagar: R${finalPrice}</p>
         <div className="cart-items">
           {itemsList}
         </div>

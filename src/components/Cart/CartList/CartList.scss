@@ -3,14 +3,23 @@
 .cart-list {
   display: block;
   width: 100%;
+
+  .final-price {
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+
   .cart-items {
     @include flexBox($direction: column);
     margin-top: 40px;
   }
+
   @include respond-to('medium'){
     .cart-items {
       flex-direction: row;
       flex-wrap: wrap;
     }
+
   }
+
 }
