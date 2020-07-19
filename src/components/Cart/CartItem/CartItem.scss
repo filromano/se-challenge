@@ -1,0 +1,10 @@
+@import '../../../scss/utils.scss';
+
+.cart-item {
+  @include flexBox($content: space-between, $items: center);
+  div {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

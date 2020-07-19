@@ -10,7 +10,7 @@ import { getProducts } from './store/actions/products';
 
 class App extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.getProducts();
   }
 
