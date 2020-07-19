@@ -8,14 +8,14 @@
   justify-content: center;
   height: 75px;
   width: 100%;
-  background-color: #ffffffcf;
+  background-color: $orangeBaseAlpha;
 
   .navbar-item {
     display: block;
     width: 300px;
-    padding: 15px;
+    padding: 20px;
     font-size: 1.3em;
-    color: $orangeBase;
+    color: #FFFFFF;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
