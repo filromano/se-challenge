@@ -1,11 +1,14 @@
 @import '../../../scss/utils.scss';
 
 .product-item {
-  @include flexBox($direction: column, $basis: 23%);
+  @include flexBox($direction: column);
   @extend .box-basic;
   box-sizing: border-box;
   padding: 10px 20px;
   margin: 10px 1%;
+  @include respond-to('medium') {
+    width: 300px;
+  }
 }
 
 .product-item .header{

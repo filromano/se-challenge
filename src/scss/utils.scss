@@ -2,6 +2,19 @@
 $orangeBase: #fe5c3d;
 $darkOrange: #e42911;
 $lightOrange: #ffa492;
+$breakpoints: (
+  'medium': 600px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
 
 //mixings
 @mixin flexBox($direction: row, $basis: null, $content: null, $items: null, $wrap: null) {

@@ -4,7 +4,13 @@
   display: block;
   width: 100%;
   .cart-items {
-    @include flexBox($wrap: wrap, $content: space-between);
+    @include flexBox($direction: column);
     margin-top: 40px;
+  }
+  @include respond-to('medium'){
+    .cart-items {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }

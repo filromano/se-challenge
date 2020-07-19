@@ -4,8 +4,8 @@
   @include flexBox();
   @extend .box-basic;
   box-sizing: border-box;
-  max-width: 32%;
   padding: 20px;
+  margin: 5px;
   .image {
     display: block;
     width: 200px;
@@ -30,5 +30,8 @@
       font-weight: 800;
       text-align: right;
     }
+  }
+  @include respond-to('medium') {
+    width: 455px;
   }
 }

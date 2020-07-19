@@ -1,6 +1,10 @@
 @import '../../../scss/utils.scss';
 
 .product-list {
-  @include flexBox($wrap: wrap);
+  @include flexBox($direction: column, $content: center);
   width: 100%;
+  @include respond-to('medium') {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
