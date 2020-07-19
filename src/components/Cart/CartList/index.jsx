@@ -14,44 +14,57 @@ class CartList extends Component {
   render() {
     const cart = this.props.cart;
     let itemsList;
+    const totals = [0];
     if(cart.length > 0){
       itemsList = cart.map((item, index) => {
-        return (
-          <CartItem key={index}
-                    order={item}/>
-        );
+
+        const product = this.props.products.filter(product => product.id === item.productId)[0];
+        if(product) {
+          const pack = product.packs.filter(pack => pack.id === item.packId)[0];
+          const total = parseFloat((pack.current_price * item.quantity).toFixed(2));
+          totals.push(total)
+          return (
+            <CartItem key={index}
+                      name={product.name}/>
+          ); 
+        }
       })
     } else {
       itemsList = <h1>Carrinho vazio</h1>;
     }
+
+    const finalPrice = totals.reduce((a, b) => a + b);
 
     return (
       <div className="cart-list">
         <div className="cart-table">
           <div className="header">
             <div className="header-item">
-              <h2>Nome</h2>
+              <p>Nome</p>
             </div>
             <div className="header-item">
-              <h2>Preço</h2>
+              <p>Preço</p>
             </div>
             <div className="header-item">
-              <h2>Preço c/ desconto</h2>
+              <p>Preço c/ desconto</p>
             </div>
             <div className="header-item">
-              <h2>Quant.</h2>
+              <p>Quant.</p>
             </div>
             <div className="header-item">
-              <h2>Total</h2>
+              <p>Total</p>
             </div>
           </div>
           {itemsList}
+        </div>
+        <div>
+          <p>{finalPrice}</p>
         </div>
       </div>
     )
   }
 }
 
-const mapStateToProps  = (state) => ({cart: state.cart})
+const mapStateToProps  = (state) => ({cart: state.cart, products: state.products.items})
 
 export default connect(mapStateToProps)(CartList);
