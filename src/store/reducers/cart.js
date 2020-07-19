@@ -6,7 +6,9 @@ const initialState = [{
 
 
 function removeItem(array, action) {
-  return array.filter((item) => (item.productId !== action.payload.productId && item.packId !== action.payload.packId))
+  console.log('action', action)
+  console.log('array', array)
+  return array.filter((item) => (item.productId !== action.payload.productId || (item.productId === action.payload.productId && item.packId !== action.payload.packId)))
 }
 
 function updateItem(array, action) {
