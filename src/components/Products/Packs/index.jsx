@@ -55,11 +55,13 @@ class Packs extends Component {
 
   render() {
 
-    const buttons = this.state.packs.map((pack, index) => {
+    const { productId, packs, selectedPack, selected } = this.state;
+
+    const buttons = packs.map((pack, index) => {
       if(pack.status === 'ACTIVE'){
         return (
           <button key={index}
-                  className={index === this.state.selectedPack ? 'active' : ''}
+                  className={index === selectedPack ? 'active' : ''}
                   onClick={e => this.selectPack(index)}>
             {pack.unities} unid.
           </button>
@@ -79,21 +81,21 @@ class Packs extends Component {
         </div>
         <div className="prices">
           <span><strong>DESC.:</strong>
-            <span className="discount"> {this.state.selected.percentage}%</span>
+            <span className="discount"> {selected.percentage}%</span>
           </span>
           <span><strong>DE:</strong>
             <span className="original-price">
-              R$ {this.state.selected.originalPrice.toString().replace('.', ',')}
+              R$ {selected.originalPrice.toString().replace('.', ',')}
             </span>
           </span>
           <span><strong>POR:</strong>
             <span className="final-price">
-              R$ {this.state.selected.currentPrice.toString().replace('.', ',')}
+              R$ {selected.currentPrice.toString().replace('.', ',')}
             </span>
           </span>
         </div>
-        <CartBox productId={this.state.productId}
-                   packId={this.state.selected.id}/>
+        <CartBox productId={productId}
+                 packId={selected.id}/>
       </div>
     );
   }

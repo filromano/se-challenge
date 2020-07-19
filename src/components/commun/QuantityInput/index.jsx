@@ -13,13 +13,16 @@ class QuantityInput extends Component {
   }
 
   render() {
+
+    const { productId, packId, quantity, updateQuantityToCart } = this.props;
+
     return (
       <div className="cart-quantity">
         <span className="remove"
-              onClick={e => this.props.updateQuantityToCart(this.props.productId, this.props.packId, this.props.quantity - 1)}>-</span>
-        <input className="amount" type="text" readOnly value={this.props.quantity}/>
+              onClick={e => updateQuantityToCart(productId, packId, quantity - 1)}>-</span>
+        <input className="amount" type="text" readOnly value={quantity}/>
         <span className="add"
-              onClick={e => this.props.updateQuantityToCart(this.props.productId, this.props.packId, this.props.quantity + 1)}>+</span>
+              onClick={e => updateQuantityToCart(productId, packId, quantity + 1)}>+</span>
       </div>
     )
   }

@@ -20,9 +20,16 @@ class CartList extends Component {
 
         const product = this.props.products.filter(product => product.id === item.productId)[0];
         if(product) {
+
+          // get pack Info
           const pack = product.packs.filter(pack => pack.id === item.packId)[0];
+
+          //calculate total for Item
           const total = parseFloat((pack.current_price * item.quantity).toFixed(2));
+
+          //push total, to array with all totals
           totals.push(total)
+
           return (
             <CartItem key={index}
                       productId={product.id}

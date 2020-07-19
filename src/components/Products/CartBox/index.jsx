@@ -13,8 +13,9 @@ class AddToCart extends Component {
   render() {
 
     let button;
+    const { cart, productId, packId, addToCart } = this.props;
 
-    const check = this.props.cart.filter((item) => item.productId === this.props.productId && item.packId === this.props.packId);
+    const check = cart.filter((item) => item.productId === productId && item.packId === packId);
 
     if(check.length > 0) {
       button =  <QuantityInput productId={check[0].productId}
@@ -22,7 +23,7 @@ class AddToCart extends Component {
                                quantity={check[0].quantity}/>
     } else {
       button = <button className="cart-button" 
-                      onClick={e => this.props.addToCart(this.props.productId, this.props.packId, 1)}>
+                      onClick={e => addToCart(productId, packId, 1)}>
                   Adicionar ao carrinho
                 </button>
     }
