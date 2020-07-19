@@ -1,12 +1,25 @@
+@import '../../../scss/utils.scss';
+
 .content {
   display: block;
   width: 100%;
 
   .title {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: 400;
+    @include flexBox($content: center);
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      font-weight: 400;
+    }
+
+    .icon {
+      display: block;
+      width: 30px;
+      height: 30px;
+      padding: 5px 10px 0 0;
+    }
+
   }
   
 }
