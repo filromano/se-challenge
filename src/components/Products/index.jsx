@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import Grid from '../template/Grid/';
 import ProductList from './ProductList/';
+import Filter from './Filter/Filter';
 import productsImage from '../../images/products.png';
 
 class Product extends Component {
@@ -19,22 +20,13 @@ class Product extends Component {
     this.setState({filter: event.target.value})
   }
 
-  render() {
-    console.log(this.state)
-    const option = this.props.brands.map(brand=> (
-      <option key={brand.id}
-              value={brand.slug}>{
-        brand.name}
-      </option>
-    ));
+  render() {    
 
     return (
       <Grid title="Produtos"
             image={productsImage}>
-        <select onChange={this.changeFilter}>
-          <option value="">Filtrar</option>
-          {option}
-        </select>
+        <Filter brands={this.props.brands}
+                changeFilter={this.changeFilter}/>
         <ProductList filter={this.state.filter}/>
       </Grid>
     )

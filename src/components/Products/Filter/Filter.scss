@@ -1,0 +1,25 @@
+@import '../../../scss/utils.scss';
+
+.filter {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 15px;
+  width: 100%;
+  background-color: $orangeBase;
+  padding: 20px;
+  margin-bottom: 20px;
+  select {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('data:image/png;base64,UklGRpIAAABXRUJQVlA4TIUAAAAvP8APEEcQEQoi2aCj70cBRVRRQOCq94cE20iSnFzVx0AIYGN9CPhgYWtCIAFxab/cPRcrov+K3LZt1MGr3yE/6Rlb3NTUey6H6t8ZpB61KmjRAFI7uMMjLyd4CJ6JwRIgGZAUdTnqktRkqUlTylNqINdCroH7S5rINJE0oWpTZBvkZz0CAA=='),
+      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+  }
+}
