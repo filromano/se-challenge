@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
-import Grid from '../template/Grid/';
-import ProductList from './ProductList/';
+import Grid from '../template/Grid/Grid';
+import ProductList from './ProductList/ProductList';
 import Filter from './Filter/Filter';
 import productsImage from '../../images/products.png';
 

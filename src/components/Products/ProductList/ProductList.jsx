@@ -3,7 +3,7 @@ import './ProductList.scss';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import ProductItem from '../ProductItem/';
+import ProductItem from '../ProductItem/ProductItem';
 
 class ProductList extends Component {
 

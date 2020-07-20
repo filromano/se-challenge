@@ -2,7 +2,7 @@ import './CartItem.scss';
 
 import React from 'react';
 
-import QuanityInput from '../../commun/QuantityInput';
+import QuanityInput from '../../commun/QuantityInput/QuantityInput';
 import { defaultImage } from '../../../js/utils';
 
 export default (props) => {

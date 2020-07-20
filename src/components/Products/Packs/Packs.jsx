@@ -2,7 +2,7 @@ import './Packs.scss';
 
 import React, { Component } from 'react';
 
-import CartBox from '../CartBox/';
+import CartBox from '../CartBox/CartBox';
 
 import { setPercentage } from '../../../js/utils';
 

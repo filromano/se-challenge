@@ -2,7 +2,7 @@ import './ProductItem.scss';
 
 import React from 'react';
 
-import Packs from '../Packs/';
+import Packs from '../Packs/Packs';
 import { defaultImage } from '../../../js/utils';
 
 export default (props) => {

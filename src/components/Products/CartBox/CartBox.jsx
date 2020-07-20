@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import QuantityInput from  '../../commun/QuantityInput';
+import QuantityInput from  '../../commun/QuantityInput/QuantityInput';
 
 import { addToCart } from '../../../store/actions/cart';
 

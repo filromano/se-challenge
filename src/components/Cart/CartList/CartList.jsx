@@ -3,7 +3,7 @@ import './CartList.scss';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import CartItem from '../CartItem/';
+import CartItem from '../CartItem/CartItem';
 
 import { setPercentage } from '../../../js/utils';
 

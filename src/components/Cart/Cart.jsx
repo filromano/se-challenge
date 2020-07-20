@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Grid from '../template/Grid/';
-import CartList from  './CartList/';
+import Grid from '../template/Grid/Grid';
+import CartList from  './CartList/CartList';
 import cartImage from '../../images/cart.png';
 
 class Cart extends Component {
