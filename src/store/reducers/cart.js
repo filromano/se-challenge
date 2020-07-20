@@ -1,8 +1,6 @@
-const initialState = [{
-  productId:"50",
-  packId:"148",
-  quantity: 2,
-}];
+const initialState = localStorage.getItem('se-cart') ?
+                     JSON.parse(localStorage.getItem('se-cart')) :
+                     [];
 
 
 function removeItem(array, action) {
