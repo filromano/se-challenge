@@ -18,7 +18,6 @@ class Packs extends Component {
         id: null,
         originalPrice: '',
         currentPrice: '',
-        percentage: ''
       }
     }
   }
@@ -31,14 +30,12 @@ class Packs extends Component {
     const id = this.state.packs[this.state.selectedPack].id;
     const originalPrice = this.state.packs[this.state.selectedPack].original_price;
     const currentPrice = this.state.packs[this.state.selectedPack].current_price;
-    const percentage = setPercentage(originalPrice, currentPrice);
     this.setState(state => ({
       selected: {
         ...state.selected,
         id,
         originalPrice,
         currentPrice,
-        percentage
       }
     }));
   }
@@ -77,7 +74,7 @@ class Packs extends Component {
         </div>
         <div className="prices">
           <span><strong>DESC.:</strong>
-            <span className="discount"> {selected.percentage}%</span>
+            <span className="discount"> {this.props.percentage}%</span>
           </span>
           <span><strong>DE:</strong>
             <span className="original-price">

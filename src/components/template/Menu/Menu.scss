@@ -9,6 +9,7 @@
   height: 75px;
   width: 100%;
   background-color: $orangeBaseAlpha;
+  z-index: 999;
 
   .navbar-item {
     display: block;

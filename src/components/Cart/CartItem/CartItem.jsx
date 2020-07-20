@@ -3,6 +3,7 @@ import './CartItem.scss';
 import React from 'react';
 
 import QuanityInput from '../../commun/QuantityInput/QuantityInput';
+import Emblem from '../../commun/Emblem/Emblem';
 import { defaultImage } from '../../../js/utils';
 
 export default (props) => {
@@ -13,6 +14,7 @@ export default (props) => {
     <div className="cart-item">
       <div className="image">
         <img onError={defaultImage} src={image} alt={name}/>
+        <Emblem percentage={percentage}/>
       </div>
       <div className="description">
         <div className="info">
