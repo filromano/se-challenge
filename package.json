@@ -8,7 +8,7 @@
     "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Filipe Romano Rodrigues",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
