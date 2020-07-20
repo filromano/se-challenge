@@ -12,6 +12,10 @@ npm install
 npm start
 ```
 
+### Open your browser on:
+
+[http://localhost:8080/](http://localhost:8080/)
+
 ## Build dist
 
 ```bash
