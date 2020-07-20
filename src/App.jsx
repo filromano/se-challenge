@@ -7,11 +7,13 @@ import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 
 import { getProducts } from './store/actions/products';
+import { getBrands } from './store/actions/brands';
 
 class App extends Component {
 
   componentDidMount() {
     this.props.getProducts();
+    this.props.getBrands();
   }
 
   render() {
@@ -24,6 +26,6 @@ class App extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => 
-  bindActionCreators({ getProducts }, dispatch);
+  bindActionCreators({ getProducts, getBrands }, dispatch);
 
 export default connect(null, mapDispatchToProps)(App)

@@ -12,14 +12,23 @@ class ProductList extends Component {
   }
 
   render() {
-    const list = this.props.products.map((item) => (
-      <ProductItem key={item.id}
-                   productId={item.id}
-                   name={item.name}
-                   vendor={item.vendors[0].vendor.name}
-                   image={item.image}
-                   packs={item.packs}/>
-    ));
+
+    const { filter, products } = this.props;
+
+    const items = filter === '' ? products : products.filter(product => product.vendors[0].vendor.slug === filter)
+    
+
+    const list = items.map((item) => {
+
+      return (
+        <ProductItem key={item.id}
+                     productId={item.id}
+                     name={item.name}
+                     vendor={item.vendors[0].vendor.name}
+                     image={item.image}
+                     packs={item.packs}/>
+      )
+    });
     return (
       <div>
         <div className="product-list">
