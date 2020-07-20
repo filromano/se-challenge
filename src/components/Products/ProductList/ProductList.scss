@@ -6,6 +6,6 @@
   @include respond-to('medium') {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
   }
 }

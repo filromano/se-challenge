@@ -29,6 +29,7 @@
 
   @include respond-to('medium') {
     width: 340px;
+    margin-right: 10px;
 
     .image {
       width: 80%;
