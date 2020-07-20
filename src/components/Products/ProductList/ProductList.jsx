@@ -13,9 +13,14 @@ class ProductList extends Component {
 
   render() {
 
-    const { filter, products } = this.props;
+    const { filter, products, searchBox } = this.props;
 
-    const items = filter === '' ? products : products.filter(product => product.vendors[0].vendor.slug === filter)
+    // filter
+    let items = filter === '' ? products : products.filter(product => product.vendors[0].vendor.slug === filter)
+
+    //after filter apply searchBox
+    items = searchBox === '' ? items : items.filter(item => item.name.toLowerCase().includes(searchBox.toLowerCase()));
+
     
 
     const list = items.map((item) => {

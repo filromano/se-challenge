@@ -19,6 +19,12 @@ export default (props) => {
         <option value="">Todos</option>
         {options}
       </select>
+      <div className="search-box">
+        <label>Pesquisar: </label>
+        <input type="text" 
+               name="serach-box"
+               onKeyUp={e => props.searchBox(e.target.value)}/>
+      </div>
     </div>
   )
 };

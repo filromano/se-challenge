@@ -1,17 +1,17 @@
 @import '../../../scss/utils.scss';
 
 .filter {
-  display: block;
+  @include flexBox($content: space-between);
   box-sizing: border-box;
   border-radius: 15px;
   width: 100%;
   background-color: $orangeBase;
   padding: 20px;
   margin-bottom: 20px;
+  color: #FFFFFF;
   select {
     display: block;
-    width: 300px;
-    margin: 0 auto;
+    width: 100px;
     padding: 10px;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -21,5 +21,21 @@
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
+    border-radius: 15px;
+  }
+  
+  .search-box {
+    input {
+      border-radius: 15px;
+      border: none;
+      padding: 10px;
+      margin-left: 5px;
+    }
+  }
+
+  @include respond-to('medium') {
+    select {
+      width: 300px;
+    }
   }
 }

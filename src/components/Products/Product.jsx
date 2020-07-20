@@ -13,11 +13,16 @@ class Product extends Component {
     super(props)
     this.state = {
       filter: '',
+      searchBox: '',
     }
   }
 
   changeFilter = (event) => {
     this.setState({filter: event.target.value})
+  }
+
+  searchBox = (value) => {
+    this.setState({searchBox: value})
   }
 
   render() {    
@@ -26,8 +31,10 @@ class Product extends Component {
       <Grid title="Produtos"
             image={productsImage}>
         <Filter brands={this.props.brands}
-                changeFilter={this.changeFilter}/>
-        <ProductList filter={this.state.filter}/>
+                changeFilter={this.changeFilter}
+                searchBox={this.searchBox}/>
+        <ProductList filter={this.state.filter}
+                     searchBox={this.state.searchBox}/>
       </Grid>
     )
   }
